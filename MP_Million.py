@@ -51,9 +51,19 @@ def getBothDeposits(array):
 	return [array[0], getSecondDeposit(array)]
 
 if __name__ == "__main__":
-	print("Bleep Boop!")		
+	print("Bleep Boop!")
+	length=0;
+	longestSolutions = []
 	for entry in splitsFib( buildArray(33) ):
-		print(entry)
-		print(getBothDeposits(entry))
+		if len(entry) == length:
+			longestSolutions.append(entry)
+		if len(entry) > length:
+			length = len(entry)
+			longestSolutions = []
+			longestSolutions.append(entry)
+	print("The longest entry is", length, ".")
+	for solution in longestSolutions:
+		print(solution)
+		print(getBothDeposits(solution))
 	# buildArray(13)
 	# print(buildArray(13))
