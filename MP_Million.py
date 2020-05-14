@@ -32,8 +32,8 @@ def continueFib(array):
 	#remove negative values
 	if array[0] < 1:
 		array.pop(0)
-	if array[0] > array[1]:
-		flipArrayElements(array,0,1)
+	# if array[0] > array[1]:
+	# 	flipArrayElements(array,0,1)
 	return array
 
 #derive deposits for the splits array
