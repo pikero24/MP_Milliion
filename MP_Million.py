@@ -43,14 +43,17 @@ def splitsFib(array):
 	print("Derived Deposts")
 	return array	
 
-#get the initial deposit ammounts
-# def getDeposits(array):
+#get the second deposit
+def getSecondDeposit(array):
+	return array[1]-array[0]
 
+def getBothDeposits(array):
+	return [array[0], getSecondDeposit(array)]
 
 if __name__ == "__main__":
 	print("Bleep Boop!")		
-	for entry in splitsFib( buildArray(13) ):
+	for entry in splitsFib( buildArray(33) ):
 		print(entry)
-		print(abs(entry[1]-entry[0]))
+		print(getBothDeposits(entry))
 	# buildArray(13)
 	# print(buildArray(13))
