@@ -51,7 +51,6 @@ if __name__ == "__main__":
 	print("Bleep Boop!")		
 	for entry in splitsFib( buildArray(13) ):
 		print(entry)
-
-
+		print(abs(entry[1]-entry[0]))
 	# buildArray(13)
 	# print(buildArray(13))
