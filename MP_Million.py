@@ -17,13 +17,23 @@ def buildArray(endNum):
 	print("Splits Buiilt")
 	return outputArray
 
+#flip array element positions
+def flipArrayElements(array, id1, id2):
+	temp = array[id1];
+	array[id1] = array[id2]
+	array[id2] = temp
+	return array
+
 #derive the rest of the fibinachi sequence deposits
 def continueFib(array):
 	while array[0] > 1:
 		nextNum = array[1]-array[0]
 		array.insert(0,nextNum)
+	#remove negative values
 	if array[0] < 1:
 		array.pop(0)
+	if array[0] > array[1]:
+		flipArrayElements(array,0,1)
 	return array
 
 #derive deposits for the splits array
@@ -34,7 +44,8 @@ def splitsFib(array):
 	return array	
 
 #get the initial deposit ammounts
-# def getDeposits(array)
+# def getDeposits(array):
+
 
 if __name__ == "__main__":
 	print("Bleep Boop!")		
